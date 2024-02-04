@@ -1,0 +1,349 @@
+<html lang="en">
+<head>
+  <title>Bus Reservation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+    // JavaScript function to toggle the login/signup modal
+    function toggleLoginModal() {
+      var modal = document.getElementById('loginModal');
+      modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Function to handle login (this is a simple client-side logic)
+    function handleLogin() {
+      var email = document.getElementById('loginEmail').value;
+      var password = document.getElementById('loginPassword').value;
+
+      // Add your authentication logic here
+      // For simplicity, we'll just display an alert for demonstration purposes
+      alert('Login attempt\nEmail: ' + email + '\nPassword: ' + password);
+
+      // You can add more sophisticated login logic here (e.g., AJAX requests to the server)
+      // If login is successful, you may redirect the user to a different page
+    }
+    
+    function toggleLoginModal() {
+        var modal = document.getElementById('loginModal');
+        modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function handleLogin() {
+        var email = document.getElementById('loginEmail').value;
+        var password = document.getElementById('loginPassword').value;
+        alert('Login attempt\nEmail: ' + email + '\nPassword: ' + password);
+    }
+</script>
+</head>
+
+<style>
+
+div{
+    width: 100%;
+    height: 40px;
+    color:black;
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-right: 20px;
+    
+    
+    
+}
+#a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding-left: 30px;
+    margin-left: 60px;
+    font-weight: bold;
+    font-size: large;
+
+}
+#b
+{
+    padding-left: 580px;
+    color: black;
+    margin-left: 20px;
+}
+.custom-box {
+      width: 300px;
+      height: 100px;
+      border: 2px solid #333;
+      padding: 20px;
+      margin: 20px;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: inline-block;
+    }
+    .custom-box1 {
+      width: 100%;
+      height: 330px;
+      border: 2px solid #333;
+      margin: 20px;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: inline-block;
+      border-radius: 10px;
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-right: 30px;
+    }
+    .image-text-container {
+  position: absolute;
+  top: 10%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+
+  /* Make sure it's on top of the image */
+}
+.custom-box2 {
+      width: 100%;
+      height: 420px;
+      border: 2px solid #333;
+      margin: 20px;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: inline-block;
+      border-radius: 10px;
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-right: 30px;
+    }
+    .custom-box3 {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #333;
+      margin: 20px;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: inline-block;
+      border-radius: 10px;
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-right: 30px;
+    }
+    .footer1 {
+      position: relative;
+      background-image: url('black.png'); /* Replace 'your-image.jpg' with your image URL */
+      background-size: cover; 
+      background-position: center;
+      color: white; /* Adjust the text color */
+      padding-top: 20px;
+      text-align: center;
+      height: 600px;
+      width: 100%;
+    }
+
+    .footer-text {
+      position: absolute;
+      top: 30px; /* Adjust the distance from the bottom */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px; /* Adjust the font size */
+    }
+    .modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height:400px;
+  background-color: yellowgreen;
+}
+
+.modal-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <header class="bg-dark fixed-top" style="position: fixed;">
+    <div class="navbar-nav navbar-fixed-top">
+        <span>
+            <a href="#" style="padding-left: 20px; font-size: 30px;">Bus<sub style="color: red;">यात्रा</sub></a>
+            <i class="fa fa-bus"style="font-size:24px; margin-left: 20px;"><a href="#" style="color: black; margin-left: 10px;">BUSES</a></i> 
+             <select class="button -btn btn-lg btn-outline-light" style="margin-left: 20px; background-color: #007bff;">
+              <option>Buses we Provide</option>
+              <option>Sleeper</option>
+              <option>AC-Bus</option>
+              <option>Non-Ac Bus</option>
+              <option>Luxery</option>
+              <option>Mini Bus</option>
+              <option>Ordinary Bus</option>
+            </select>   
+            <a href="#offer" class="navbar-nav-item" id="b"style="font-size:24px"> % Offers</a>
+            <i class="fa fas" class="navbar-nav-item"  style="font-size: 24px; padding-left: 20px;"><a href="reservation.html" style="color: black;">Book Tickets</a></i>
+            <a class="glyphicon glyphicon-user" class="Login" href="javascript:void(0);" style="padding-left: 30px; color: orangered; font-size: 24px;" onclick="toggleLoginModal()">Login/SignUp</a>
+        </div>
+</span>
+</header>
+<span>
+<img src="bus-moves.webp" width="100%" height="600px" alt="bus" style="padding-top: 60px; z-index: -1;">
+</span>
+<p style="padding-left: 20px; color: black;font-size: 30px; font-weight: bold; margin-top: 40px;">Bus Booking Discount Offers</p>
+<div id="offer">
+    <img src="th.jfif" height="250px" width="360px">
+    <img src="go-bus-lp-1554378948.avif" height="250px" width="360px" style="margin-left: 20px;">
+    <img src="img-1579168147.avif" height="250px" width="360px" style="margin-left: 20px;">
+    <img src="valentine-bus-1581403152.jpg" height="250px" width="400px" style="margin-left: 20px;">
+</div>
+<p style="margin-top: 300px ; padding-left: 20px; font-size: 30px; font-weight: bold;">Why choose Bus-यात्रा for bus Ticket Booking?</p>
+<p style="padding-left: 20px; font-size: 20px;">Bus-यात्रा  is India’s fastest growing online ticket booking platform. AbhiBus is the official ticketing partner of several State Road Transport Corporation (SRTC) operators and over 3500+ private bus partners covering more than 100,000 bus routes</p>
+<div class="custom-box">
+    <i class="fas fa-route"><b>1,00,000+ Bus Routes</b><br>
+        offering unparalleled choices for your travel needs</i>
+  </div>
+  <div class="custom-box">
+    <i class="fas fa-route"><b>3500+ Bus Partners</b><br>
+        ranging from State RTCs to private partners</i>
+  </div>
+  <div class="custom-box">
+    <i class="fas fa-route"><b>Fastest Bus Booking</b><br>
+        swift and seamless bus ticket booking experience</i>
+  </div>
+  <div class="custom-box">
+    <i class="fas fa-route"><b>24/7 Customer Support</b><br>
+        available for all your bus booking needs</i>
+  </div>
+  
+    <div class="custom-box1" style="font-size: 20px;"><b>Online Bus Booking Services</b><br><br>
+        AbhiBus is India`s leading online bus ticket booking service provider. Check out budget friendly 
+        offers and save big with discount coupons to book bus tickets at the lowest price with us.
+        You can check the bus schedules, compare prices, and find all the information you need to plan
+         an ideal and comfortable bus or train journey.<br><br>AbhiBus has simplified the online bus booking process for your travel planning.
+          In case you need to cancel the ticket or change the dates, You can save both time and money by choosing AbhiCash as a refund option
+           which can be used instantly. Book now!!!<br><br>Browse through all your bus route options, and use our advanced smart filters to ensure a reliable 
+           and comfortable journey, tailored to your scheduled travel plans.</div>
+ 
+           <div class="image-text-container">
+            <p class="image-text"style="text-align: center; color: black; font-size: 40px;">Welcome to BUS<sub style="color: red;">यात्रा</sub></p>
+          </div>
+          <div class="custom-box2" style="font-size: 20px;"><b>Online Bus Ticket Booking at Lowest Price</b><br><br>With AbhiBus, travellers can book bus tickets online at the lowest ticket fares. Travellers can choose their favorite bus for online bus booking. AbhiBus is the right place for reserving bus tickets as you will find a wide range of Private buses and SRTC (State Road Transport Corporation) buses are available for bus booking online on AbhiBus.
+            Below, you will find various types of buses available to book bus tickets on AbhiBus at the lowest fare for bus ticket booking:
+            <ul>
+              <li>AC Buses</li>
+              <li>Non AC Buses</li>
+              <li>Ordinary Buses</li>
+              <li>Mini Buses</li>
+              <li>Super Luxury (Non-AC Seater)</li>
+            </ul>
+            The bus ticket fare depends on the factors such as type of bus, bus operator, bus routes distance between origin and destination cities,
+             amenities offered by the bus operator, and bus operators may change ticket prices during festive seasons. Travelling by bus journey is 
+             the best option, cost effective and the most convenient travel option compared to other modes of transport.</div>
+             <div class="custom-box3" style="font-size: 20px;"><b>Benefits of Booking Bus Tickets Online</b><br><br>In this day and age of technology, offline modes of bus ticket booking are no longer preferred. Online ticket booking is easy, fast, and hassle-free. AbhiBus ticks off all the three with user-friendly app and website navigation.
+             <br><br>Booking bus tickets online with AbhiBus has resolved many issues that people encounter while booking tickets at offline counters or through travel agents. Download the AbhiBus App to experience the benefits of bus ticket booking online.
+             <br><br>Here is a list of all the benefits of booking bus tickets online on AbhiBus<br>
+             <ul>
+              <li>Avoid standing in long queues at offline bus ticket counters.</li>
+              <li>No more hassle of approaching travel agents.</li>
+              <li>Choose from multiple bus services.</li>
+              <li>Book both Private and SRTC bus tickets online.</li>
+              <li>24/7 customer support.</li>
+              <li>Free Cancellation - Get 100% refund if your plan changes and you cancel your ticket..</li>
+            </ul></div>
+
+            <!-- ... -->
+            <div class="footer1"><h1>Contact Us For Any Enquiry</h1>
+              <input type="text" placeholder="Enter Name*" required style="height: 50px; width: 500px;border-radius: 20px;"><br>
+              <input type="email" placeholder="Enter Email*" required style="height: 50px; width: 500px;border-radius: 20px;"><br>
+              <input type="number" placeholder="Enter Phone no.*" required style="height: 50px; width: 500px;border-radius: 20px;"><br>
+              <input type="text" placeholder="Enter Message*" required style="height: 100px; width: 500px;border-radius: 20px;"><br><br>
+              <button type="submit">Send Message</button>
+
+            </div>
+              <div class="modal" id="loginModal">
+              <!-- <div class="modal-content"> -->
+                <span class="close" onclick="toggleLoginModal()">&times;</span>
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(); return false;">
+                  <label for="loginEmail">Email:</label>
+                  <input type="email" id="loginEmail" name="loginEmail" required>
+                  <label for="loginPassword">Password:</label>
+                  <input type="password" id="loginPassword" name="loginPassword" required>
+                  <button type="submit">Login</button>
+                  <p>Don't have an account? <a href="#">Sign up</a></p>
+                </form>
+              </div>
+            </div>
+            <footer>
+             
+              <p style="background-color: brown; text-align: center;font-size: 20px;height: 40px; width: 100%; margin-top: 0%;">Copyright © 2024 Nisha Nagdeve</p>
+            
+            </footer>
+               
+             <!-- Bootstrap script link -->
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            </body>

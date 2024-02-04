@@ -1,0 +1,108 @@
+<!-- reservation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bus Reservation Form</h1>
+    <form id="reservationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br>
+
+        <label for="fromStation">From:</label>
+        <select id="fromStation" required>
+            <option>Select Station</option>
+            <option>Aurngabad</option>
+            <option>Nagpur</option>
+            <option>Pune</option>
+            <!-- Add more stations as needed -->
+        </select><br>
+
+        <label for="toStation">To:</label>
+        <select id="toStation" required>
+            <option>Select Station</option>
+            <option>Aurngabad</option>
+            <option>Nagpur</option>
+            <option>Pune</option>
+            <!-- Add more stations as needed -->
+        </select><br>
+
+        <label for="governmentId">Select Government ID:</label>
+        <select id="governmentId" required>
+            <option>Other</option>
+            <option>Adhaar Card</option>
+            <option>Pan Card</option>
+            <option>Passport</option>
+            <!-- Add more government ID options as needed -->
+        </select><br>
+
+        <label for="idNumber">ID Number:</label>
+        <input type="text" id="idNumber" required><br>
+
+        <label for="busType">Select Bus Type:</label>
+        <select id="busType" required>
+            <option>Sleeper</option>
+            <option>Ac-Bus</option>
+            <option>Non-Ac bus</option>
+            <option>Seater</option>
+            <!-- Add more bus types as needed -->
+        </select><br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" required><br>
+
+        <button type="button" onclick="bookTicket()">Book Ticket</button>
+    </form>
+
+    <script>
+        function bookTicket() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const fromStation = document.getElementById('fromStation').value;
+            const toStation = document.getElementById('toStation').value;
+            const governmentId = document.getElementById('governmentId').value;
+            const idNumber = document.getElementById('idNumber').value;
+            const busType = document.getElementById('busType').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+
+            const receiptUrl = `receipt.html?firstName=${firstName}&lastName=${lastName}&fromStation=${fromStation}&toStation=${toStation}&governmentId=${governmentId}&idNumber=${idNumber}&busType=${busType}&contactNumber=${contactNumber}`;
+
+            window.location.href = receiptUrl;
+        }
+    </script>
+</body>
+</html>

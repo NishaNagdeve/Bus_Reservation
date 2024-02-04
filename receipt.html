@@ -1,0 +1,66 @@
+<!-- receipt.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Receipt</h1>
+    <div>
+        <p>First Name: <span id="firstName"></span></p>
+        <p>Last Name: <span id="lastName"></span></p>
+        <p>From Station: <span id="fromStation"></span></p>
+        <p>To Station: <span id="toStation"></span></p>
+        <p>Government ID: <span id="governmentId"></span></p>
+        <p>ID Number: <span id="idNumber"></span></p>
+        <p>Bus Type: <span id="busType"></span></p>
+        <p>Contact Number: <span id="contactNumber"></span></p>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        document.getElementById('firstName').innerText = getParameterByName('firstName');
+        document.getElementById('lastName').innerText = getParameterByName('lastName');
+        document.getElementById('fromStation').innerText = getParameterByName('fromStation');
+        document.getElementById('toStation').innerText = getParameterByName('toStation');
+        document.getElementById('governmentId').innerText = getParameterByName('governmentId');
+        document.getElementById('idNumber').innerText = getParameterByName('idNumber');
+        document.getElementById('busType').innerText = getParameterByName('busType');
+        document.getElementById('contactNumber').innerText = getParameterByName('contactNumber');
+    </script>
+</body>
+</html>
